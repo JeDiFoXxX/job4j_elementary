@@ -23,4 +23,22 @@ class CounterTest {
         int result = Counter.sum(start, finish);
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void whenStartIsMinus2FinishIs5ThenIs4() {
+        int start = -2;
+        int finish = 5;
+        int expected = 4;
+        int result = Counter.sumByEven(start, finish);
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenStartIs1FinishIs15ThenIs56() {
+        int start = 1;
+        int finish = 15;
+        int expected = 56;
+        int result = Counter.sumByEven(start, finish);
+        assertThat(result).isEqualTo(expected);
+    }
 }

@@ -7,35 +7,29 @@ import static org.assertj.core.api.Assertions.*;
 class PointTest {
 
     @Test
-    void when00to20Then2() {
-        int inputX1 = 0;
-        int inputY1 = 0;
-        int inputX2 = 2;
-        int inputY2 = 0;
+    void whenThis00That20Then2() {
+        Point x = new Point(0, 0);
+        Point y = new Point(2, 0);
         double expected = 2;
-        double output = Point.distance(inputX1, inputY1, inputX2, inputY2);
+        double output = x.distance(y);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
-    void whenMinus32to5Minus4Then10() {
-        int inputX1 = -3;
-        int inputY1 = 2;
-        int inputX2 = 5;
-        int inputY2 = -4;
+    void whenThisMinus32That5Minus4Then10() {
+        Point x = new Point(-3, 2);
+        Point y = new Point(5, -4);
         double expected = 10;
-        double output = Point.distance(inputX1, inputY1, inputX2, inputY2);
+        double output = x.distance(y);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
-    void when32to4Minus9Then11Dot04() {
-        int inputX1 = 3;
-        int inputY1 = 2;
-        int inputX2 = 4;
-        int inputY2 = -9;
+    void whenThis32That4Minus9Then11Dot04() {
+        Point x = new Point(3, 2);
+        Point y = new Point(4, -9);
         double expected = 11.04;
-        double output = Point.distance(inputX1, inputY1, inputX2, inputY2);
+        double output = x.distance(y);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }

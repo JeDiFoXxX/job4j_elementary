@@ -32,4 +32,25 @@ class MaxTest {
         int outputResult = Max.max(left, right);
         assertThat(outputResult).isEqualTo(expected);
     }
+
+    @Test
+    void whenMaxBetween4And10And7Then10() {
+        int left = 4;
+        int middle = 10;
+        int right = 7;
+        int expected = 10;
+        int outputResult = Max.max(left, middle, right);
+        assertThat(outputResult).isEqualTo(expected);
+    }
+
+    @Test
+    void whenMaxBetweenMinus2And2And22And222Then222() {
+        int first = -2;
+        int second = 2;
+        int third = 22;
+        int fourth = 222;
+        int expected = 222;
+        int outputResult = Max.max(first, second, third, fourth);
+        assertThat(outputResult).isEqualTo(expected);
+    }
 }
